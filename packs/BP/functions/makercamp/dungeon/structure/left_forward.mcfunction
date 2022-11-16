@@ -1,3 +1,7 @@
+# © Makercamp SRLS, 2022
+# authors: Fabrimat
+# description: Paste left-forward shape
+
 # Forward
 execute @s[rym=-45, ry=45] ^-8 ^-2 ^8 structure load makercamp:left_forward ~ ~ ~ 0_degrees none layer_by_layer
 # Left
