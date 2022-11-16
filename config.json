@@ -1,0 +1,202 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.json",
+	"author": "Makercamp SRLs",
+	"name": "Progressive Dungeons",
+	"packs": {
+		"behaviorPack": "./packs/BP",
+		"resourcePack": "./packs/RP"
+	},
+	"regolith": {
+		"dataPath": "./packs/data",
+		"filterDefinitions": {
+			"bump_manifest": {
+				"url": "github.com/Bedrock-OSS/regolith-filters",
+				"version": "c87c0adf08824e0a4efda5ec0b047ca156c520a6"
+			},
+			"export": {
+				"url": "github.com/cda94581/regolith-filters",
+				"version": "0.0.3"
+			},
+			"exporter": {
+				"url": "github.com/Fabrimat/regolith-filters",
+				"version": "70b693d71456d1663cf704b21ef7c8a343f7e060"
+			},
+			"js_formatter": {
+				"url": "github.com/MajestikButter/Regolith-Filters",
+				"version": "6fa6a6a9298f7d033d0f2e421edfb33292807aae"
+			},
+			"json_cleaner": {
+				"url": "github.com/Bedrock-OSS/regolith-filters",
+				"version": "1.1.1"
+			},
+			"json_formatter": {
+				"url": "github.com/MajestikButter/Regolith-Filters",
+				"version": "6fa6a6a9298f7d033d0f2e421edfb33292807aae"
+			},
+			"link_manifests": {
+				"url": "github.com/Hatchibombotar/useful-regolith-filters",
+				"version": "0.0.1"
+			},
+			"name_ninja": {
+				"url": "github.com/Bedrock-OSS/regolith-filters",
+				"version": "1.2.1"
+			},
+			"pack_commons": {
+				"url": "github.com/Hatchibombotar/useful-regolith-filters",
+				"version": "1.0.1"
+			}
+		},
+		"profiles": {
+			"default": {
+				"export": {
+					"readOnly": false,
+					"target": "development"
+				},
+				"filters": [
+					{
+						"filter": "json_cleaner"
+					},
+					{
+						"filter": "name_ninja",
+						"settings": {
+							"blocks": {
+								"auto_name": true,
+								"postfix": "§r",
+								"prefix": ""
+							},
+							"entities": {
+								"auto_name": true,
+								"postfix": "§r",
+								"prefix": ""
+							},
+							"ignored_identifiers": [
+								"minecraft"
+							],
+							"items": {
+								"auto_name": true,
+								"postfix": "§r",
+								"prefix": ""
+							},
+							"language": "en_US.lang",
+							"overwrite": false,
+							"sort": true,
+							"spawn_eggs": {
+								"auto_name": true,
+								"postfix": " Spawn Egg§r",
+								"prefix": ""
+							}
+						}
+					},
+					{
+						"filter": "pack_commons"
+					},
+					{
+						"filter": "link_manifests"
+					}
+				]
+			},
+			"export": {
+				"export": {
+					"readOnly": false,
+					"target": "local"
+				},
+				"filters": [
+					{
+						"filter": "json_cleaner"
+					},
+					{
+						"filter": "bump_manifest"
+					},
+					{
+						"filter": "name_ninja",
+						"settings": {
+							"blocks": {
+								"auto_name": true,
+								"postfix": "§r",
+								"prefix": ""
+							},
+							"entities": {
+								"auto_name": true,
+								"postfix": "§r",
+								"prefix": ""
+							},
+							"ignored_identifiers": [
+								"minecraft"
+							],
+							"items": {
+								"auto_name": true,
+								"postfix": "§r",
+								"prefix": ""
+							},
+							"language": "en_US.lang",
+							"overwrite": false,
+							"sort": true,
+							"spawn_eggs": {
+								"auto_name": true,
+								"postfix": " Spawn Egg§r",
+								"prefix": ""
+							}
+						}
+					},
+					{
+						"filter": "pack_commons"
+					},
+					{
+						"filter": "link_manifests"
+					},
+					{
+						"filter": "js_formatter",
+						"settings": {
+							"enforceExceptions": [
+								"mojang-minecraft",
+								"mojang-gametest"
+							],
+							"enforceJSImports": false,
+							"scriptPaths": [
+								"BP/**/*.js"
+							],
+							"singleLine": true
+						}
+					},
+					{
+						"filter": "json_formatter",
+						"settings": {
+							"comments": false,
+							"obfuscate": true,
+							"packs": [
+								"BP",
+								"RP"
+							],
+							"singleLine": true
+						}
+					},
+					{
+						"filter": "exporter",
+						"settings": {
+							"exclude": [],
+							"name": "ProgressiveDungeons",
+							"target": "addon"
+						}
+					},
+					{
+						"filter": "exporter",
+						"settings": {
+							"exclude": [],
+							"name": "ProgressiveDungeons",
+							"target": "world"
+						}
+					},
+					{
+						"filter": "exporter",
+						"settings": {
+							"exclude": [],
+							"name": "ProgressiveDungeons",
+							"target": "template"
+						}
+					}
+				]
+			}
+		},
+		"useAppData": false
+	}
+}

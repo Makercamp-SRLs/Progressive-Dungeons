@@ -1,0 +1,44 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Fabrimat"
+		]
+	},
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"min_engine_version": [
+			1,
+			19,
+			20
+		],
+		"uuid": "4fee36bd-dee2-4c63-b31e-b26a3557edee",
+		"version": [
+			1,
+			0,
+			1
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "ba1d34a7-7789-44c6-832f-746a937eb347",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "e7fdadc5-aa91-4a82-9c7f-e99eab24c5a0",
+			"version": [
+				1,
+				0,
+				1
+			]
+		}
+	]
+}

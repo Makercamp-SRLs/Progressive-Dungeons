@@ -1,0 +1,19 @@
+## Tags used in the map
+## tag=initialized
+## Tags to be excluded
+## tag=!Monster
+## Objectives used in the map
+## objective=var
+## Families
+## family=npc
+## Entity names
+## name=Steve
+structure=makercamp:forward
+structure=makercamp:closed
+structure=makercamp:left_forward
+structure=makercamp:right_forward
+structure=makercamp:three_way
+structure=makercamp:turn_left
+structure=makercamp:turn_right
+structure=makercamp:wye
+tag=debug

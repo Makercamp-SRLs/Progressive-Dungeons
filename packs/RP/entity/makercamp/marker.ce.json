@@ -1,0 +1,24 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "makercamp:marker",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "geometry": {
+                "default": "geometry.makercamp.void"
+            },
+            "spawn_egg": {
+                "base_color": "#288483",
+                "overlay_color": "#2B7135"
+            },
+            "render_controllers": [
+                "controller.render.makercamp.standard"
+            ],
+            "textures": {
+                "default": "textures/empty"
+            }
+        }
+    }
+}
