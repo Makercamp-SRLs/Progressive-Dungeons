@@ -9,6 +9,8 @@ execute @s[rym=135, ry=-135] ^8 ^-2 ^24 structure load makercamp:forward ~ ~ ~ 1
 
 tp @s ^ ^ ^16 facing ^ ^ ^17
 
-tellraw @a[tag=debug] {"rawtext":[{"text":"[Debug] Paste normal forward"}]}
+tag @s[tag=!forcing] add ran
+tag @s[tag=forcing] add f_ran
 
-tag @s add ran
+execute @s[tag=!forcing] ~ ~ ~ tellraw @a[tag=debug] {"rawtext":[{"text":"[Debug] Paste normal forward"}]}
+execute @s[tag=forcing] ~ ~ ~ tellraw @a[tag=debug] {"rawtext":[{"text":"[Debug] Paste forced forward"}]}

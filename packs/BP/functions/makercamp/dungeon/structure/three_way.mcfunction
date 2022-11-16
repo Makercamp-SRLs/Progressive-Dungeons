@@ -16,6 +16,8 @@ tp @e[tag=!waypoint, tag=!ran, r=1, type=makercamp:marker] ^ ^ ^16 facing ^1 ^ ^
 execute @s ^ ^ ^16 tag @e[tag=!ran, tag=!waypoint, r=1, type=makercamp:marker] add waypoint
 tp @s ^ ^ ^16 facing ^ ^ ^17
 
-execute @s ~ ~ ~ tellraw @a[tag=debug] {"rawtext":[{"text":"[Debug] Paste normal three-way"}]}
+tag @s[tag=!forcing] add ran
+tag @s[tag=forcing] add f_ran
 
-tag @s add ran
+execute @s[tag=!forcing] ~ ~ ~ tellraw @a[tag=debug] {"rawtext":[{"text":"[Debug] Paste normal three-way"}]}
+execute @s[tag=forcing] ~ ~ ~ tellraw @a[tag=debug] {"rawtext":[{"text":"[Debug] Paste forced three-way"}]}
