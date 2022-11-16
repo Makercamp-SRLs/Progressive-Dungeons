@@ -177,22 +177,6 @@
 							"name": "ProgressiveDungeons",
 							"target": "addon"
 						}
-					},
-					{
-						"filter": "exporter",
-						"settings": {
-							"exclude": [],
-							"name": "ProgressiveDungeons",
-							"target": "world"
-						}
-					},
-					{
-						"filter": "exporter",
-						"settings": {
-							"exclude": [],
-							"name": "ProgressiveDungeons",
-							"target": "template"
-						}
 					}
 				]
 			}
