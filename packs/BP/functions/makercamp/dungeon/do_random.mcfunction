@@ -10,9 +10,6 @@ execute @s[rym=45, ry=135] ~ ~ ~ scoreboard players add @s random 5
 execute @s[rym=135, ry=-135] ~ ~ ~ scoreboard players add @s random 7
 scoreboard players operation @s random %= control structures
 
-#function makercamp/dungeon/random
-#scoreboard players operation @s random = control random
-
 execute @s[scores={random=0..3}, tag=!forward_obstruct] ~ ~ ~ function makercamp/dungeon/structure/forward
 execute @s[scores={random=4}, tag=!left_obstruct] ~ ~ ~ function makercamp/dungeon/structure/turn_left
 execute @s[scores={random=5}, tag=!right_obstruct] ~ ~ ~ function makercamp/dungeon/structure/turn_right
